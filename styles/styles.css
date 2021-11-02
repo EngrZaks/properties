@@ -1,0 +1,281 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #efeeee;
+  text-align: center;
+  font-family: "Roboto";
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #efeeee;
+  box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  margin-bottom: 1rem;
+  display: flex;
+}
+nav .title {
+  display: flex;
+  align-items: center;
+}
+nav .title h1 {
+  color: green;
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+}
+nav .title i {
+  color: palegreen;
+  font-size: 2rem;
+}
+nav .menu {
+  margin-left: auto;
+}
+nav ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #efeeee;
+  width: 100%;
+  box-shadow: 0px 3px 4px 2px rgba(0, 128, 0, 0.609);
+  transition: all 0.5s ease-in-out;
+}
+nav ul .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+nav ul li {
+  padding: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+nav ul li a:hover {
+  color: green;
+}
+
+main {
+  text-align: left;
+}
+main .featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #efeeee;
+  box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem;
+}
+main .featured h1 {
+  color: green;
+  font-weight: bold;
+}
+main .featured .featured-items .item {
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  background-color: #efeeee;
+  box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+main .featured .featured-items .item .properties {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.4rem;
+  padding: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.253);
+}
+main .featured .featured-items .item .properties .property {
+  font-weight: bold;
+}
+main .featured .featured-items .item .properties .value {
+  color: green;
+}
+
+header {
+  background-color: rgba(152, 251, 152, 0.342);
+  padding: 1rem;
+}
+header h1 {
+  font-size: 1.7rem;
+  margin: 0.5rem;
+  font-family: "Roboto Slab", serif;
+}
+header p {
+  margin: 1rem 0;
+}
+
+form {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form input {
+  padding: 0.7rem;
+  box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+form button {
+  border: none;
+  background-color: white;
+  margin-left: -3em;
+}
+form img {
+  width: 1em;
+}
+
+.show {
+  display: flex;
+}
+
+.opac {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */
