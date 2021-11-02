@@ -29,11 +29,11 @@ closeBtn.addEventListener("click", toggleMenu);
 products.map((product) => {
   const item = document.createElement("div");
   item.classList.add("item");
-  let children = `<h1>${product.crop} </h1>`;
+  let children = `<h2>${product.crop} </h2> <img src='${product.img}' alt='{product.crop'/>`;
   for (const key in product) {
     if (Object.hasOwnProperty.call(product, key)) {
       const element = product[key];
-      if (key === "crop" || key === "details") continue;
+      if (key === "crop" || key === "details" || key === "img") continue;
       children =
         children +
         `<div class='properties'> <span class='property'>${key}:</span> <span class='value'>${element}</span> </div>`;
@@ -42,3 +42,7 @@ products.map((product) => {
   item.innerHTML = children;
   featured.appendChild(item);
 });
+
+// const image = document.querySelector("img");
+// image.src = "";
+// console.log(products.length);

@@ -14,11 +14,13 @@ const products = [
     porosity: "40.5 to 43.7%",
     staticKOfFriction: "0.384 to 0.651",
     angleOfRepose: "25.5° to 30.4°",
+    img: "assets/grahm.jpg",
   },
   {
     crop: "Cumin Seed",
     details:
       "The physical properties of cumin seed were evaluated as a function of moisture content. The average length, breadth and thickness were 5·61, 1·77 and 1·55 mm respectively. In the moisture range from 7 to 22% d.b., studies on dried or rewetted cumin seed showed that bulk density initially increased from 477 to 502 kg/m3then decreased from 502 to 410 kg/m3, true density increased from 1047 to 1134 kg/m3, and porosity increased from 54 to 64%. The 1000 seed weight and terminal velocity increased linearly from 4·13 to 4·80 g and 2·6 to 4·8 m/s respectively. The angle of repose increased linearly from 36·5 to 51·3 ° and the static coefficient of friction also increased linearly on four metal surfaces, namely, mild steel (0·54 to 0·70), galvanized iron (0·48 to 0·65), stainless steel (0·37 to 0·62) and aluminium (0·43 to 0·63) with the increase in moisture content from 7 to 22% d.b.",
+    img: "assets/cumin.jpg",
     length: "5.61mm",
     width: "1.77m",
     thickness: "1.55",
@@ -48,6 +50,7 @@ const products = [
     kernelDensity: "1216 to 1124 kg/m3",
     bulkDensity: "735 to 708 kg/m3",
     porosity: "0.40 to 0.37",
+    img: "assets/soybean.jpg",
   },
   {
     crop: "Barbunia bean seed",
@@ -66,6 +69,7 @@ const products = [
     trueDensity: "1225.68 to 1126.15 kg/m3",
     staticKOfFriction:
       "rubber(0.213–0.271), Al(0.161–0.222), s-steel(0.147–0.207). G-iron(0.169–0.246)",
+    img: "assets/barbounia-beans.jpg",
   },
   {
     crop: "Sunflower seeds ",
@@ -97,6 +101,7 @@ const products = [
     kernel_staticKOfFriction: "0.43 to 0.81",
     angleOfRepose: "34° to 41°",
     kernel_angleOfRepose: "27° to 38°",
+    img: "assets/sunflower-seeds.jpg",
   },
   {
     crop: "Millet",
@@ -119,6 +124,7 @@ const products = [
       "P-wood(0.42 to 0.79), M-steel(0.39 to 0.75), G-iron(0.36 to 0.69) ",
     bulkDensity: "10%",
     porosity: "7.5%",
+    img: "assets/millet.jpg",
   },
   {
     crop: "African pear",
@@ -141,5 +147,6 @@ const products = [
     porosity: "31.07%",
     staticKOfFriction:
       "highest on concrete surface and lowest on glass surfaces",
+    img: "assets/arigo.jpg",
   },
 ];
