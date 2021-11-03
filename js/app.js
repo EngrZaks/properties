@@ -73,6 +73,7 @@ showAllBtn.addEventListener("click", () => {
   featured.style.opacity = 0;
   fetureHeading.textContent = "All Products";
   showAllBtn.style.display = "none";
+  window.scrollTo(0, 0);
   setTimeout(() => {
     featured.innerHTML = "";
     showAllProducts([]);
