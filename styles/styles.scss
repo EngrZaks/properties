@@ -87,6 +87,7 @@ main {
       padding: 1rem;
     }
     .featured-items {
+      transition: all 0.5s ease;
       h2 {
         font-size: 1.2rem;
         padding-bottom: 0.8rem;
@@ -189,9 +190,15 @@ form {
   main {
     .featured {
       .featured-items {
+        width: 100%;
         display: flex;
+        align-items: baseline;
+        justify-content: center;
+        flex-wrap: wrap;
         .item {
           margin: 0.5rem;
+          max-width: 300px;
+          flex: 1 0 auto;
         }
       }
     }

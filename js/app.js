@@ -1,7 +1,9 @@
-const menu = document.querySelector(".menu");
-const closeBtn = document.querySelector(".close");
-const menuItems = document.querySelector("ul");
-const featured = document.querySelector(".featured-items");
+const menu = document.querySelector(".menu"),
+  closeBtn = document.querySelector(".close"),
+  menuItems = document.querySelector("ul"),
+  featured = document.querySelector(".featured-items"),
+  showAllBtn = document.querySelector(".showAllButton"),
+  fetureHeading = document.querySelector(".featured h1");
 
 const show = (item, showClass, opacClass) => {
   item.classList.add(showClass);
@@ -52,6 +54,7 @@ function showAllProducts(filterItems) {
             key.toLowerCase().includes("vel") ||
             key.toLowerCase().includes("vol") ||
             key.toLowerCase().includes("diam") ||
+            key.toLowerCase().includes("kernel") ||
             key.toLowerCase().includes("fric")
           )
             continue;
@@ -64,8 +67,18 @@ function showAllProducts(filterItems) {
       featured.appendChild(item);
     });
 }
-
 showAllProducts(["cumi", "millet", "pear", "sun"]);
+// showAllProducts([]);
+showAllBtn.addEventListener("click", () => {
+  featured.style.opacity = 0;
+  fetureHeading.textContent = "All Products";
+  showAllBtn.style.display = "none";
+  setTimeout(() => {
+    featured.innerHTML = "";
+    showAllProducts([]);
+    featured.style.opacity = 1;
+  }, 500);
+});
 // const image = document.querySelector("img");
 // image.src = "";
 // console.log(products.length);
