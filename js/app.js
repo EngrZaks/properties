@@ -26,23 +26,46 @@ menu.addEventListener("click", toggleMenu);
 closeBtn.addEventListener("click", toggleMenu);
 
 // import { products } from "./properties";
-products.map((product) => {
-  const item = document.createElement("div");
-  item.classList.add("item");
-  let children = `<h2>${product.crop} </h2> <img src='${product.img}' alt='{product.crop'/>`;
-  for (const key in product) {
-    if (Object.hasOwnProperty.call(product, key)) {
-      const element = product[key];
-      if (key === "crop" || key === "details" || key === "img") continue;
-      children =
-        children +
-        `<div class='properties'> <span class='property'>${key}:</span> <span class='value'>${element}</span> </div>`;
-    }
-  }
-  item.innerHTML = children;
-  featured.appendChild(item);
-});
+function showAllProducts(filterItems) {
+  products
+    .filter((product) => {
+      let filter = true;
+      for (let index = 0; index < filterItems.length; index++) {
+        const element = filterItems[index].toLowerCase();
+        if (product.crop.toLowerCase().includes(element)) filter = false;
+      }
+      return filter;
+    })
+    .map((product) => {
+      const item = document.createElement("div");
+      item.classList.add("item");
+      let children = `<h2>${product.crop} </h2> <img src='${product.img}' alt='${product.crop}'/>`;
+      for (const key in product) {
+        if (Object.hasOwnProperty.call(product, key)) {
+          const element = product[key];
+          if (
+            key === "crop" ||
+            key === "details" ||
+            key === "img" ||
+            key.toLowerCase().includes("density") ||
+            key.toLowerCase().includes("thousand") ||
+            key.toLowerCase().includes("vel") ||
+            key.toLowerCase().includes("vol") ||
+            key.toLowerCase().includes("diam") ||
+            key.toLowerCase().includes("fric")
+          )
+            continue;
+          children =
+            children +
+            `<div class='properties'> <span class='property'>${key}:</span> <span class='value'>${element}</span> </div>`;
+        }
+      }
+      item.innerHTML = children;
+      featured.appendChild(item);
+    });
+}
 
+showAllProducts(["cumi", "millet", "pear", "sun"]);
 // const image = document.querySelector("img");
 // image.src = "";
 // console.log(products.length);

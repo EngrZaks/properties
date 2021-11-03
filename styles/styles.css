@@ -160,14 +160,21 @@ nav .title {
 nav .title h1 {
   color: green;
   font-weight: bold;
-  font-family: "Roboto Condensed", sans-serif;
+  padding: 0.4rem;
+  padding-right: 0;
+  font-family: "Gluten", cursive;
+  max-width: 200px;
+  text-align: left;
+  line-height: 1.2rem;
 }
 nav .title i {
+  background-color: black;
   color: palegreen;
   font-size: 2rem;
 }
 nav .menu {
   margin-left: auto;
+  padding: 0.4rem;
 }
 nav ul {
   position: absolute;
@@ -219,16 +226,17 @@ main .featured h1 {
 }
 main .featured .featured-items h2 {
   font-size: 1.2rem;
-  padding: 0.8rem;
+  padding-bottom: 0.8rem;
   font-weight: bold;
 }
 main .featured .featured-items .item {
+  height: fit-content;
   margin: 0.8rem 0;
   padding: 0.5rem;
   background-color: white;
   box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1rem;
+  border-radius: 1.2rem;
 }
 main .featured .featured-items .item img {
   width: 100%;
@@ -243,15 +251,26 @@ main .featured .featured-items .item .properties {
   margin: 0.4rem 0;
 }
 main .featured .featured-items .item .properties .property {
-  padding: 0.4rem;
-  border-radius: 0.5rem;
-  background-color: #efeeee91;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  margin-right: 0.3rem;
+  background-color: #e3e3e3a1;
 }
 main .featured .featured-items .item .properties .value {
-  padding: 0.4rem;
-  border-radius: 0.5rem;
-  background-color: #efeeee91;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  background-color: #e3e3e3a1;
   color: green;
+}
+main .featured .showAllButton {
+  color: rgba(10, 10, 58, 0.7);
+  background-color: rgba(255, 255, 255, 0.39);
+  font-weight: 700;
+  padding: 0.8rem;
+  margin: auto;
+  border-radius: 0.8rem;
+  box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(61, 61, 61, 0.2);
 }
 
 header {
@@ -266,7 +285,7 @@ header h1 {
 }
 header p {
   margin: 1rem 0;
-  line-height: 1.5rem;
+  line-height: 1rem;
 }
 
 form {
@@ -276,9 +295,11 @@ form {
   justify-content: center;
 }
 form input {
-  padding: 0.7rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
   box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50%;
 }
 form button {
   border: none;
@@ -295,6 +316,27 @@ form img {
 
 .opac {
   opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  main .featured .featured-items {
+    display: flex;
+  }
+  main .featured .featured-items .item {
+    margin: 0.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  main .featured .featured-items {
+    display: flex;
+  }
+  main .featured .featured-items .item {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  main .featured .featured-items .item .properties {
+    padding: 0.3rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
