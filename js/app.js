@@ -3,7 +3,9 @@ const menu = document.querySelector(".menu"),
   menuItems = document.querySelector("ul"),
   featured = document.querySelector(".featured-items"),
   showAllBtn = document.querySelector(".showAllButton"),
-  fetureHeading = document.querySelector(".featured h1");
+  fetureHeading = document.querySelector(".featured h1"),
+  search = document.forms[0],
+  suggestions = document.querySelector(".search-result");
 
 const show = (item, showClass, opacClass) => {
   item.classList.add(showClass);
@@ -58,17 +60,21 @@ function showAllProducts(filterItems) {
             key.toLowerCase().includes("fric")
           )
             continue;
+          const round = element.length < 6 ? "round" : "";
           children =
             children +
-            `<div class='properties'> <span class='property'>${key}:</span> <span class='value'>${element}</span> </div>`;
+            `<div class='properties' > <span class='property'>${key}:</span> <span class='value ${round}'>${element}</span> </div>`;
         }
       }
       item.innerHTML = children;
       featured.appendChild(item);
+      item.onclick = logt;
     });
 }
+function logt(e) {
+  console.log("it's working");
+}
 showAllProducts(["cumi", "millet", "pear", "sun"]);
-// showAllProducts([]);
 showAllBtn.addEventListener("click", () => {
   featured.style.opacity = 0;
   fetureHeading.textContent = "All Products";
@@ -80,6 +86,21 @@ showAllBtn.addEventListener("click", () => {
     featured.style.opacity = 1;
   }, 500);
 });
-// const image = document.querySelector("img");
-// image.src = "";
-// console.log(products.length);
+const findMatches = (searchString, products) => {
+  return products.filter((product) => {
+    const regex = new RegExp(searchString, "gi");
+    return product.crop.match(regex);
+  });
+};
+const handleSearch = (e) => {
+  const searchString = e.target.value;
+  const items = findMatches(searchString, products);
+  let html = items.map((product) => `<li>${product.crop}</li>`).join("");
+  suggestions.innerHTML = html;
+};
+
+search.onsubmit = (e) => {
+  e.preventDefault();
+};
+search.addEventListener("change", handleSearch);
+search.addEventListener("keyup", handleSearch);

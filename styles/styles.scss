@@ -5,6 +5,7 @@ body {
   font-family: "Roboto";
 }
 nav {
+  z-index: 2;
   position: sticky;
   top: 0;
   background-color: #efeeee;
@@ -92,6 +93,15 @@ main {
         font-size: 1.2rem;
         padding-bottom: 0.8rem;
         font-weight: bold;
+        background-color: white;
+        margin-bottom: 0.4rem;
+        width: fit-content;
+        border-radius: 00.3rem;
+        padding: 0.3rem;
+        box-shadow: 6px 6px 16px #d1cdc780,
+          -6px -6px 16px rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 1.2rem;
       }
       .item {
         height: fit-content;
@@ -107,6 +117,9 @@ main {
           height: 200px;
           object-fit: cover;
           border-radius: 1rem;
+          box-shadow: 6px 6px 16px #d1cdc780,
+            -6px -6px 16px rgba(255, 255, 255, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .properties {
           display: flex;
@@ -126,7 +139,16 @@ main {
             background-color: #e3e3e3a1;
             color: green;
           }
+          .round {
+            border-radius: 50%;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+          }
         }
+        transition: all 0.5s ease;
+      }
+      .item:hover {
+        transform: scale(1.03);
       }
     }
     .showAllButton {
@@ -163,6 +185,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   input {
     padding: 0.8rem;
     border-radius: 00.8rem;
@@ -177,6 +200,25 @@ form {
   }
   img {
     width: 1em;
+  }
+  //search
+  ul {
+    z-index: 1;
+    position: absolute;
+    top: 2rem;
+    // padding: 0.5rem;
+    border-radius: 00.8rem;
+    box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.541);
+    li {
+      padding: 00.5rem;
+      border-radius: 00.8rem;
+    }
+    li:nth-of-type(odd) {
+      background-color: #efeeee8c;
+    }
   }
 }
 .show {
@@ -206,6 +248,43 @@ form {
 }
 
 @media only screen and (min-width: 992px) {
+  nav {
+    .title {
+      h1 {
+        max-width: 500px;
+        letter-spacing: 0.1rem;
+      }
+      i {
+        font-size: 3rem;
+      }
+    }
+    .menu {
+      display: none;
+    }
+    ul {
+      .close {
+        display: none;
+      }
+      margin-left: auto;
+      position: relative;
+      display: flex;
+      opacity: 1;
+      flex-direction: row;
+      background-color: #efeeee;
+      width: auto;
+      box-shadow: 0px 0px 0px 0px;
+      li {
+        padding: 10px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          color: green;
+        }
+      }
+    }
+  }
   main {
     .featured {
       .featured-items {
