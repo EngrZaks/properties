@@ -15,6 +15,9 @@ const products = [
     staticKOfFriction: "0.384 to 0.651",
     angleOfRepose: "25.5° to 30.4°",
     img: "assets/grahm.jpg",
+    ref: "S.K. Dutta, V.K. Nema, R.K. Bhardwaj, Physical properties of gram, Journal of Agricultural Engineering Research, Volume 39, Issue 4, 1988, Pages 259-268, ISSN 0021-8634",
+    link: "https://doi.org/10.1016/0021-8634(88)90147-3",
+    link2: "https://www.sciencedirect.com/science/article/pii/0021863488901473",
   },
   {
     crop: "Cumin Seed",
@@ -33,6 +36,10 @@ const products = [
     angleOfRepose: "36.5° to 51.3°",
     staticKOfFriction:
       "M-steel(0.54-0.70), Galv-iron(0.48-0.65), S-steel(0.37-0.62), Al(0.43-0.63)",
+    ref: `K.K. Singh, T.K. Goswami, Physical Properties of Cumin Seed, Journal of Agricultural Engineering Research, Volume 64, Issue 2, 1996, Pages 93-98, ISSN 0021-8634 `,
+    link: " https://doi.org/10.1006/jaer.1996.0049",
+    link2:
+      "https://www.sciencedirect.com/science/article/pii/S0021863496900499",
   },
   {
     crop: "Soybean",
@@ -51,6 +58,10 @@ const products = [
     bulkDensity: "735 to 708 kg/m3",
     porosity: "0.40 to 0.37",
     img: "assets/soybean.jpg",
+    ref: `S.D. Deshpande, S. Bal, T.P. Ojha, Physical Properties of Soybean, Journal of Agricultural Engineering Research, Volume 56, Issue 2, 1993, Pages 89-98, ISSN 0021-8634`,
+    link: "https://doi.org/10.1006/jaer.1993.1063",
+    link2:
+      "https://www.sciencedirect.com/science/article/pii/S0021863483710632",
   },
   {
     crop: "Barbunia bean seed",
@@ -70,6 +81,10 @@ const products = [
     staticKOfFriction:
       "rubber(0.213–0.271), Al(0.161–0.222), s-steel(0.147–0.207). G-iron(0.169–0.246)",
     img: "assets/barbounia-beans.jpg",
+    ref: `Mustafa Cetin, Physical properties of barbunia bean (Phaseolus vulgaris L. cv. ‘Barbunia’) seed, Journal of Food Engineering, Volume 80, Issue 1, 2007, Pages 353-358, ISSN 0260-8774, Keywords: Barbunia bean seed; Physical properties; Moisture content`,
+    link: "https://doi.org/10.1016/j.jfoodeng.2006.06.004",
+    link2:
+      "https://www.sciencedirect.com/science/article/pii/S0260877406004493",
   },
   {
     crop: "Sunflower seeds ",
@@ -102,6 +117,10 @@ const products = [
     angleOfRepose: "34° to 41°",
     kernel_angleOfRepose: "27° to 38°",
     img: "assets/sunflower-seeds.jpg",
+    ref: `R.K. Gupta, S.K. Das, Physical Properties of Sunflower Seeds, Journal of Agricultural Engineering Research, Volume 66, Issue 1, 1997, Pages 1-8, ISSN 0021-8634`,
+    link: "https://doi.org/10.1006/jaer.1996.0111",
+    link2:
+      "https://www.sciencedirect.com/science/article/pii/S0021863496901110",
   },
   {
     crop: "Millet",
@@ -125,6 +144,10 @@ const products = [
     bulkDensity: "10%",
     porosity: "7.5%",
     img: "assets/millet.jpg",
+    ref: "Edward A. Baryeh, Physical properties of millet, Journal of Food Engineering, Volume 51, Issue 1, 2002, Pages 39-46,ISSN 0260-8774",
+    link: "https://doi.org/10.1016/S0260-8774(01)00035-8",
+    link2:
+      "https://www.sciencedirect.com/science/article/pii/S0260877401000358",
   },
   {
     crop: "African pear",
@@ -148,5 +171,6 @@ const products = [
     staticKOfFriction:
       "highest on concrete surface and lowest on glass surfaces",
     img: "assets/arigo.jpg",
+    ref: "R.M. Davies, Some physical properties of arigo seeds, Department of Agricultural and Environmental Engineering, Niger Delta University, Wilberforce Island, Bayelsa State, Nigeria, 2009",
   },
 ];

@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="nav">
       <div class="title">
         <h1>Physical Properties of Agricultural Materials</h1>
         <i class="material-icons">grass</i>
@@ -61,9 +61,28 @@
     <!-- <img src="" alt="" /> -->
     <main>
       <div class="featured">
-        <h1 onclick="logt()">Featured</h1>
+        <h1>Featured</h1>
+        <small>❕ click on each product for an extended details 👇</small>
         <div class="featured-items"></div>
         <button class="showAllButton">Show All products</button>
+      </div>
+      <div class="product">
+        <div class="product-nav nav">
+          <ul>
+            <li>Properties</li>
+            <li>Summary</li>
+            <li>Reference</li>
+          </ul>
+          <span
+            class="close material-icons"
+            onclick="hide(productLay, 'show', 'opac')"
+          >
+            close
+          </span>
+        </div>
+        <div class="details more"></div>
+        <div class="summary more"></div>
+        <div class="reference more"></div>
       </div>
     </main>
 
@@ -91,7 +110,8 @@
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
     </script>
-    <script src="./js/properties.js"></script>
-    <script src="./js/app.js" defer></script>
+    <script src="./scripts/properties.js"></script>
+    <script src="./scripts/helpers.js"></script>
+    <script src="./scripts/app.js" defer></script>
   </body>
 </html>
