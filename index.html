@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <nav class="nav">
+    <nav>
       <div class="title">
         <h1>Physical Properties of Agricultural Materials</h1>
         <i class="material-icons">grass</i>
@@ -34,13 +34,14 @@
         <span class="close material-icons" style="color: green; padding: 5px">
           close
         </span>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
+        <div class="coverage">product coverage: <span></span></div>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <header>
+    <header id="header">
       <h1>Physical Properties of Agricultural materials</h1>
       <p>A final year project by Abullahi Zakariyau, ABU, Zaria</p>
       <p>under the supervision of Engineer A. O. Lawal</p>
@@ -84,6 +85,28 @@
         <div class="summary more"></div>
         <div class="reference more"></div>
       </div>
+
+      <section id="about">
+        <h1>About the Project</h1>
+        <p>a web app of Physical Properties of Agricultural Properties</p>
+        <span
+          class="close material-icons"
+          onclick="hide(sections[0], 'show', 'opac')"
+        >
+          close
+        </span>
+      </section>
+      <section id="contact">
+        <h1>Contact Us</h1>
+        <p>abzakariyya@gmail.com</p>
+        <p>+2348023767822</p>
+        <span
+          class="close material-icons"
+          onclick="hide(sections[1], 'show', 'opac')"
+        >
+          close
+        </span>
+      </section>
     </main>
 
     <footer></footer>

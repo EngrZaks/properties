@@ -10,13 +10,18 @@ const menu = document.querySelector(".menu"),
   details = document.querySelector(".details"),
   summary = document.querySelector(".summary"),
   reference = document.querySelector(".reference"),
+  mainNavList = document.querySelectorAll("nav ul li a"),
   navList = document.querySelectorAll(".nav ul li"),
-  more = document.querySelectorAll(".more");
+  more = document.querySelectorAll(".more"),
+  sections = document.querySelectorAll("section");
 let activeDetails = details,
-  activeNav = navList[3];
+  activeNav = navList[0],
+  activeNavMain = mainNavList[0];
 activeNav.classList.add("active");
 show(activeDetails, "show2", "opac");
 
+activeNavMain.classList.add("active");
+document.querySelector(".coverage span").innerHTML = products.length;
 const toggleMenu = () => {
   menuItems.classList.contains("show")
     ? hide(menuItems, "show", "opac")
@@ -27,13 +32,19 @@ function handleProductClick(product) {
   show(productLay, "show", "opac");
   productLay.style.background = `white url(${product.img}) no-repeat`;
   details.innerHTML = someProperties(product, "", false);
-  summary.innerHTML = product.details;
+  summary.innerHTML = `<p> ${product.details} </p>`;
   reference.innerHTML = product.ref
     .split(",")
     .map((line) => {
       return `<p>${line},</p>`;
     })
     .join("");
+  if (product.link) {
+    reference.innerHTML += `<a href='${product.link}' target='blank'>LINK</a>`;
+  }
+  if (product.link2) {
+    reference.innerHTML += `<a href='${product.link2}' target='blank'>2nd LINK</a>`;
+  }
 }
 
 const handleNavigate = (e) => {
@@ -47,6 +58,27 @@ const handleNavigate = (e) => {
     element.classList.remove("opac");
   });
   show(activeDetails, "show2", "opac");
+};
+
+let element;
+const handleMainNavigate = (e) => {
+  const text = e.target.textContent;
+  activeNavMain = e.target;
+  activateNav(activeNavMain, mainNavList);
+  console.log(text.toLowerCase());
+  if (text.toLowerCase() === "home") {
+    window.scrollTo(0, 0);
+  } else {
+    if (text.toLowerCase() === "about") {
+      element = sections[0];
+      hide(sections[1], "show2", "opac");
+      show(element, "show2", "opac");
+    } else if (text.toLowerCase() === "contact") {
+      element = sections[1];
+      hide(sections[0], "show2", "opac");
+      show(element, "show2", "opac");
+    }
+  }
 };
 
 showProducts(products, ["cumi", "millet", "pear", "sun"]);
@@ -76,9 +108,10 @@ const handleSuggestions = (e) => {
   suggestions.innerHTML = html;
   searchResult = items;
   let suggestionLists = document.querySelectorAll(".search-result li");
-  suggestionLists.forEach((li) => (li.onclick = handleClick));
+  suggestionLists.forEach((li) => (li.onclick = handleSuggClick));
 };
-function handleClick(e) {
+
+function handleSuggClick(e) {
   const x = e.target.textContent;
   const clickedProduct = products.filter((product) =>
     product.crop.match(x, "gi")
@@ -118,3 +151,12 @@ search.addEventListener("keyup", handleSuggestions);
 navList.forEach((element) => {
   element.addEventListener("click", handleNavigate);
 });
+mainNavList.forEach((element) => {
+  element.addEventListener("click", handleMainNavigate);
+});
+
+//
+//1. reference link
+//2. other pages routing
+//3. coverage
+//4. assets

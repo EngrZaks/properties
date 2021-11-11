@@ -3,7 +3,7 @@
   top: 10%;
   width: 90%;
   max-width: 800px;
-  height: 85%;
+  height: 80%;
   left: 50%;
   transform: translateX(-50%);
   padding-right: 1rem !important;
@@ -48,9 +48,16 @@
   .details,
   .summary,
   .reference {
+    p {
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 00.5rem;
+      border-radius: 0.7rem;
+    }
+    backdrop-filter: blur(10px);
+    width: 100%;
     display: none;
     opacity: 0;
-    background-color: rgba(255, 255, 255, 0.637);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
     padding: 00.5rem;
     overflow: auto;
@@ -86,5 +93,12 @@
     max-width: 500px;
     padding: 1.3rem;
     line-height: 1.6rem;
+  }
+  .reference a {
+    background-color: rgba(255, 255, 255, 0.466);
+    margin: 1rem;
+    padding: 00.5rem;
+    text-decoration: none;
+    border-radius: 00.5rem;
   }
 }

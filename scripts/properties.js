@@ -51,7 +51,7 @@ const products = [
     thickness: "3.99mm to 4.45mm",
     diameter: "5.09mm to 5.51mm",
     sphericity: "0.806 to 0.816",
-    surfaceArea: "0.813 to 0.95 cm2",
+    Surface_Area: "0.813 to 0.95 cm2",
     volume: "0.091 to 0.113cm3",
     ThousandSeedMass: "0.110kg to 0.127kg",
     kernelDensity: "1216 to 1124 kg/m3",

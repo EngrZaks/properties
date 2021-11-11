@@ -32,6 +32,10 @@ function someProperties(productObj, div, filter) {
           key.toLowerCase().includes("vel") ||
           key.toLowerCase().includes("vol") ||
           key.toLowerCase().includes("diam") ||
+          key.toLowerCase().includes("mas") ||
+          key.toLowerCase().includes("angle") ||
+          key.toLowerCase().includes("area") ||
+          key.toLowerCase().includes("moisture") ||
           key.toLowerCase().includes("kernel") ||
           key.toLowerCase().includes("fric")
         )
