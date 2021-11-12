@@ -29,7 +29,7 @@ const toggleMenu = () => {
 };
 
 function handleProductClick(product) {
-  show(productLay, "show", "opac");
+  // show(productLay, "show", "opac");
   productLay.style.background = `white url(${product.img}) no-repeat`;
   details.innerHTML = someProperties(product, "", false);
   summary.innerHTML = `<p> ${product.details} </p>`;
@@ -45,6 +45,7 @@ function handleProductClick(product) {
   if (product.link2) {
     reference.innerHTML += `<a href='${product.link2}' target='blank'>2nd LINK</a>`;
   }
+  productLay.classList.add("show", "opac");
   setTimeout(() => {
     productLay.classList.add("animate");
   }, 100);
@@ -52,7 +53,7 @@ function handleProductClick(product) {
 
 function hideProductLay(e) {
   productLay.classList.remove("animate");
-  hide(productLay, "show", "opac");
+  productLay.classList.remove("show", "opac");
 }
 const handleNavigate = (e) => {
   const text = e.target.textContent;

@@ -2,13 +2,13 @@ const show = (item, showClass, opacClass) => {
   item.classList.add(showClass);
   setTimeout(() => {
     item.classList.add(opacClass);
-  }, 10);
+  }, 1);
 };
 const hide = (item, showClass, opacClass) => {
   item.classList.remove(opacClass);
   setTimeout(() => {
     item.classList.remove(showClass);
-  }, 500);
+  }, 300);
 };
 
 function someProperties(productObj, div, filter) {
