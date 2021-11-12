@@ -81,9 +81,22 @@ const handleMainNavigate = (e) => {
   }
 };
 
-showProducts(products, ["cumi", "millet", "pear", "sun"]);
+//show products on screen and filter out some in the array
+showProducts(products, [
+  "cumi",
+  "millet",
+  "pear",
+  "sun",
+  "gram",
+  "bar",
+  "kidney",
+  "soybean",
+  "groundnut",
+  "cocoa",
+  "wheat",
+]);
 
-showAllBtn.addEventListener("click", () => {
+function showAllProducts(e) {
   featured.style.opacity = 0;
   fetureHeading.textContent = "All Products";
   showAllBtn.style.display = "none";
@@ -92,8 +105,11 @@ showAllBtn.addEventListener("click", () => {
     featured.innerHTML = "";
     showProducts(products, []);
     featured.style.opacity = 1;
+    document
+      .querySelectorAll(".featured-items .item")
+      .forEach((item) => (item.style.maxWidth = "280px"));
   }, 500);
-});
+}
 
 let searchResult;
 let selectedResult = [];
@@ -127,6 +143,12 @@ function handleSuggClick(e) {
   search.reset();
 }
 
+function removeSuggestions(e) {
+  if (!suggestions.contains(e.target)) {
+    suggestions.innerHTML = "";
+  }
+}
+
 const handleSearch = (e) => {
   featured.style.opacity = 0;
   fetureHeading.textContent = "Search Results";
@@ -147,16 +169,12 @@ search.onsubmit = (e) => {
 menu.addEventListener("click", toggleMenu);
 closeBtn.addEventListener("click", toggleMenu);
 search.addEventListener("change", handleSuggestions);
+window.addEventListener("click", removeSuggestions);
 search.addEventListener("keyup", handleSuggestions);
+showAllBtn.addEventListener("click", showAllProducts);
 navList.forEach((element) => {
   element.addEventListener("click", handleNavigate);
 });
 mainNavList.forEach((element) => {
   element.addEventListener("click", handleMainNavigate);
 });
-
-//
-//1. reference link
-//2. other pages routing
-//3. coverage
-//4. assets

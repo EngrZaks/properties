@@ -34,8 +34,8 @@ nav {
       text-align: left;
       line-height: 1.2rem;
     }
-    i {
-      background-color: black;
+    img {
+      // background-color: black;
       color: palegreen;
       font-size: 2rem;
       // font-weight: bold;
@@ -117,7 +117,7 @@ main {
       .item {
         height: fit-content;
         margin: 0.8rem 0;
-        // padding: 0.5rem;
+        padding: 0.5rem;
         background-color: white;
         @include shadow(0.5rem);
         img {
@@ -225,9 +225,7 @@ form {
     background-color: white;
     margin-left: -3em;
   }
-  img {
-    width: 1em;
-  }
+
   //search
   ul {
     z-index: 1;
@@ -277,7 +275,7 @@ form {
         .item {
           margin: 0.5rem;
           max-width: 300px;
-          flex: 1 0 auto;
+          // flex: 0 0 auto;
         }
       }
     }

@@ -30,13 +30,14 @@ function someProperties(productObj, div, filter) {
           key.toLowerCase().includes("density") ||
           key.toLowerCase().includes("thousand") ||
           key.toLowerCase().includes("vel") ||
-          key.toLowerCase().includes("vol") ||
+          key.toLowerCase().includes("shell") ||
           key.toLowerCase().includes("diam") ||
-          key.toLowerCase().includes("mas") ||
+          key.toLowerCase().includes("shape") ||
           key.toLowerCase().includes("angle") ||
           key.toLowerCase().includes("area") ||
           key.toLowerCase().includes("moisture") ||
           key.toLowerCase().includes("kernel") ||
+          key.toLowerCase().includes("aspect") ||
           key.toLowerCase().includes("fric")
         )
           continue;
