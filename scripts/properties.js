@@ -17,7 +17,7 @@ const products = [
     Static_K_of_friction:
       "rubber(0.402–0.494), Al(0.321–0.441), stainless-steel(0.267–0.401) galvanised-iron 0.364–0.477)",
     ref: "Bülent Coşkun, İbrahim Yalçın, Cengiz Özarslan, Physical properties of sweet corn seed (Zea mays saccharata Sturt.), Journal of Food Engineering, Volume 74, Issue 4, 2006, Pages 523-528, ISSN 0260-8774",
-    img: "assets/maize.jpg",
+    img: "assets/corn.jpg",
     link: "https://doi.org/10.1016/j.jfoodeng.2005.03.039",
     link2:
       "https://www.sciencedirect.com/science/article/pii/S0260877405001925",
