@@ -5,12 +5,14 @@
   border-radius: 1.2rem;
   padding: $padding;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #efeeee;
   text-align: center;
   font-family: "Roboto";
   transition: all 0.5s ease-in;
-  scroll-behavior: smooth;
 }
 nav {
   z-index: 2;
