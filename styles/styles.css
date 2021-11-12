@@ -302,6 +302,7 @@ main .featured .showAllButton {
   font-weight: 700;
   padding: 0.8rem;
   margin: auto;
+  margin-bottom: 2rem;
   border-radius: 0.8rem;
   box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(61, 61, 61, 0.2);
