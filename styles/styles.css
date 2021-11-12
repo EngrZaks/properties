@@ -251,6 +251,7 @@ main .featured .featured-items h2 {
 }
 main .featured .featured-items .item {
   height: fit-content;
+  max-width: 280px;
   margin: 0.8rem 0;
   padding: 0.5rem;
   background-color: white;
@@ -530,7 +531,6 @@ form ul li:nth-of-type(odd) {
   }
   main .featured .featured-items .item {
     margin: 0.5rem;
-    max-width: 300px;
   }
 }
 @media only screen and (min-width: 992px) {

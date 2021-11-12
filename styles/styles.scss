@@ -118,6 +118,7 @@ main {
       background-color: #efeeee;
       .item {
         height: fit-content;
+        max-width: 280px;
         margin: 0.8rem 0;
         padding: 0.5rem;
         background-color: white;
@@ -276,8 +277,6 @@ form {
         flex-wrap: wrap;
         .item {
           margin: 0.5rem;
-          max-width: 300px;
-          // flex: 0 0 auto;
         }
       }
     }

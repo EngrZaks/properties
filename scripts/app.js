@@ -105,9 +105,6 @@ function showAllProducts(e) {
     featured.innerHTML = "";
     showProducts(products, []);
     featured.style.opacity = 1;
-    document
-      .querySelectorAll(".featured-items .item")
-      .forEach((item) => (item.style.maxWidth = "280px"));
   }, 500);
 }
 
