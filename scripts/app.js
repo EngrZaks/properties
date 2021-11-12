@@ -45,8 +45,15 @@ function handleProductClick(product) {
   if (product.link2) {
     reference.innerHTML += `<a href='${product.link2}' target='blank'>2nd LINK</a>`;
   }
+  setTimeout(() => {
+    productLay.classList.add("animate");
+  }, 100);
 }
 
+function hideProductLay(e) {
+  productLay.classList.remove("animate");
+  hide(productLay, "show", "opac");
+}
 const handleNavigate = (e) => {
   const text = e.target.textContent;
   activeNav = e.target;
@@ -79,6 +86,7 @@ const handleMainNavigate = (e) => {
       show(element, "show2", "opac");
     }
   }
+  closeBtn.click();
 };
 
 //show products on screen and filter out some in the array

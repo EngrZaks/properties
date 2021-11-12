@@ -279,6 +279,7 @@ const products = [
     angleOfRepose: "28°",
     Static_K_of_friction:
       "glass(0.11), plywood(0.13), galvanized-steel(0.14) concrete(0.16)",
+    ref: "R.M. Davies, Some Physical Properties of Groundnut Grains, Department of Agricultural and Environmental Engineering, Niger Delta University, Wilberforce Island. Bayelsa State.",
     img: "assets/groundnut.jpg",
   },
   {

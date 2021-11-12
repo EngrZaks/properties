@@ -392,10 +392,10 @@ form ul li:nth-of-type(odd) {
 
 .product {
   position: fixed;
-  top: 10%;
-  width: 90%;
+  top: 90%;
+  width: 20%;
+  height: 20%;
   max-width: 800px;
-  height: 80%;
   left: 50%;
   transform: translateX(-50%);
   padding-right: 1rem !important;
@@ -505,6 +505,12 @@ form ul li:nth-of-type(odd) {
   padding: 0.5rem;
   text-decoration: none;
   border-radius: 0.5rem;
+}
+
+.animate {
+  top: 10%;
+  width: 90%;
+  height: 80%;
 }
 
 .show {
