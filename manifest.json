@@ -5,6 +5,7 @@
   "display": "standalone",
   "background_color": "#90ee90",
   "description": "Physical propertiest of various agricultural materials",
+  "lang": "en-US",
   "orientation": "portrait-primary",
   "theme_color": "green",
   "icons": [
