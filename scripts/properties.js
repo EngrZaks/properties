@@ -212,7 +212,7 @@ const products = [
     Terminal_Velocity: "9.31m/s to 9.61m/s",
     Bulk_density: "569.9 to 535.6 kgm−3",
     True_density: "1154.8 to 1104.1 kg m−3",
-    Static_Coefficient_of_friction:
+    StaticKofFriction:
       "rubber(0.364–0.394), Al(0.212–0.296), stainless-steel(0.176–0.238)galvanised-iron(0.324–0.36)",
     ref: ` İbrahim Yalçın,Physical properties of cowpea (Vigna sinensis L.) seed, Journal of Food Engineering, Volume 79, Issue 1,2007,Pages 57-62,ISSN 0260-8774,`,
     link: "https://doi.org/10.1016/j.jfoodeng.2006.01.026",

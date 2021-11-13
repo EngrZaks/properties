@@ -392,6 +392,7 @@ form ul li:nth-of-type(odd) {
 }
 
 .product {
+  font-size: 1.15rem;
   position: fixed;
   top: 90%;
   width: 0;
