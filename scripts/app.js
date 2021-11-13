@@ -48,14 +48,14 @@ function handleProductClick(product) {
   }
   setTimeout(() => {
     productLay.classList.add("animate");
-  }, 100);
+  }, 50);
 }
 
 function hideProductLay(e) {
   productLay.classList.remove("animate");
   setTimeout(() => {
     productLay.classList.remove("show", "opac");
-  }, 380);
+  }, 200);
 }
 const handleNavigate = (e) => {
   const text = e.target.textContent;
