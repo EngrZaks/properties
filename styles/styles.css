@@ -370,6 +370,7 @@ form button {
   border: none;
   background-color: white;
   margin-left: -3em;
+  width: 1.5rem;
 }
 form ul {
   z-index: 1;
@@ -394,31 +395,30 @@ form ul li:nth-of-type(odd) {
   position: fixed;
   top: 90%;
   width: 20%;
-  height: 20%;
-  max-width: 800px;
+  height: 85%;
+  max-width: 700px;
   left: 50%;
   transform: translateX(-50%);
   padding-right: 1rem !important;
   padding-left: 1rem !important;
-  z-index: 1;
+  z-index: 3;
   display: none;
   opacity: 0;
   flex-direction: column;
   align-items: center;
-  transition: all 0.5s ease;
+  transition: all 0.38s ease;
   background-size: cover !important;
-  box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1.2rem;
-  padding: 0.5rem;
+  border-radius: 1rem;
 }
 .product .product-nav {
-  background-color: white;
   box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
   border: 1px solid #979797;
-  border-radius: 0.5rem;
+  margin: 10px;
 }
 .product .product-nav ul {
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.568);
+  backdrop-filter: blur(10px);
   display: flex;
 }
 .product .product-nav ul li {
@@ -508,9 +508,8 @@ form ul li:nth-of-type(odd) {
 }
 
 .animate {
-  top: 10%;
+  top: 3%;
   width: 90%;
-  height: 80%;
 }
 
 .show {
@@ -529,6 +528,10 @@ form ul li:nth-of-type(odd) {
   border: 1px solid seagreen;
   border-right: 1px solid seagreen !important;
   font-weight: bold;
+}
+
+.i {
+  width: 2rem;
 }
 
 @media only screen and (min-width: 600px) {

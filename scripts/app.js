@@ -30,7 +30,8 @@ const toggleMenu = () => {
 
 function handleProductClick(product) {
   // show(productLay, "show", "opac");
-  productLay.style.background = `white url(${product.img}) no-repeat`;
+  productLay.classList.add("show", "opac");
+  productLay.style.background = `#e3e3e362 url(${product.img}) no-repeat`;
   details.innerHTML = someProperties(product, "", false);
   summary.innerHTML = `<p> ${product.details} </p>`;
   reference.innerHTML = product.ref
@@ -45,7 +46,6 @@ function handleProductClick(product) {
   if (product.link2) {
     reference.innerHTML += `<a href='${product.link2}' target='blank'>2nd LINK</a>`;
   }
-  productLay.classList.add("show", "opac");
   setTimeout(() => {
     productLay.classList.add("animate");
   }, 100);
@@ -53,7 +53,9 @@ function handleProductClick(product) {
 
 function hideProductLay(e) {
   productLay.classList.remove("animate");
-  productLay.classList.remove("show", "opac");
+  setTimeout(() => {
+    productLay.classList.remove("show", "opac");
+  }, 380);
 }
 const handleNavigate = (e) => {
   const text = e.target.textContent;

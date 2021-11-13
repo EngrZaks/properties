@@ -2,26 +2,29 @@
   position: fixed;
   top: 90%;
   width: 20%;
-  height: 20%;
-  max-width: 800px;
+  height: 85%;
+  max-width: 700px;
   left: 50%;
   transform: translateX(-50%);
   padding-right: 1rem !important;
   padding-left: 1rem !important;
-  z-index: 1;
+  z-index: 3;
   display: none;
   opacity: 0;
   flex-direction: column;
   align-items: center;
-  transition: all 0.5s ease;
+  transition: all 0.38s ease;
   background-size: cover !important;
-  @include shadow(0.5rem);
+  border-radius: 1rem;
+  // @include shadow(0.5rem);
   .product-nav {
-    background-color: white;
     box-shadow: 6px 6px 16px #d1cdc780, -6px -6px 16px rgba(255, 255, 255, 0.5);
     border: 1px solid #979797;
-    border-radius: 00.5rem;
+    margin: 10px;
     ul {
+      border-radius: 00.5rem;
+      background-color: rgba(255, 255, 255, 0.568);
+      backdrop-filter: blur(10px);
       display: flex;
       li {
         padding: 0.5rem;
@@ -103,7 +106,7 @@
   }
 }
 .animate {
-  top: 10%;
+  top: 3%;
   width: 90%;
-  height: 80%;
+  // height: 85%;
 }

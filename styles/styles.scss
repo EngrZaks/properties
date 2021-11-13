@@ -230,6 +230,7 @@ form {
     border: none;
     background-color: white;
     margin-left: -3em;
+    width: 1.5rem;
   }
 
   //search
@@ -268,7 +269,9 @@ form {
   border-right: 1px solid seagreen !important;
   font-weight: bold;
 }
-
+.i {
+  width: 2rem;
+}
 @media only screen and (min-width: 600px) {
   main {
     .featured {
