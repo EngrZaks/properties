@@ -2,12 +2,13 @@
   "name": "Agric-Properties",
   "short_name": "Agric-Properties",
   "start_url": "/index.html",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#90ee90",
   "description": "Physical propertiest of various agricultural materials",
   "lang": "en-US",
   "orientation": "portrait-primary",
-  "theme_color": "green",
+  "theme_color": "#008000",
   "icons": [
     {
       "src": "assets/logo.svg",
