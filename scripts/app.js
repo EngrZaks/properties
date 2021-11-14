@@ -7,6 +7,7 @@ const menu = document.querySelector(".menu"),
   search = document.forms[0],
   suggestions = document.querySelector(".search-result"),
   productLay = document.querySelector(".product"),
+  productTitle = document.querySelector(".product .title"),
   details = document.querySelector(".details"),
   summary = document.querySelector(".summary"),
   reference = document.querySelector(".reference"),
@@ -19,7 +20,6 @@ let activeDetails = details,
   activeNavMain = mainNavList[0];
 activeNav.classList.add("active");
 show(activeDetails, "show2", "opac");
-
 activeNavMain.classList.add("active");
 document.querySelector(".coverage span").innerHTML = products.length;
 const toggleMenu = () => {
@@ -46,16 +46,17 @@ function handleProductClick(product) {
   if (product.link2) {
     reference.innerHTML += `<a href='${product.link2}' target='blank'>2nd LINK</a>`;
   }
+  productTitle.textContent = product.crop;
   setTimeout(() => {
     productLay.classList.add("animate");
-  }, 50);
+  }, 30);
 }
 
 function hideProductLay(e) {
   productLay.classList.remove("animate");
   setTimeout(() => {
     productLay.classList.remove("show", "opac");
-  }, 200);
+  }, 150);
 }
 const handleNavigate = (e) => {
   const text = e.target.textContent;
@@ -105,6 +106,9 @@ showProducts(products, [
   "groundnut",
   "cocoa",
   "wheat",
+  "fenugreek",
+  "lupin",
+  "date",
 ]);
 
 function showAllProducts(e) {

@@ -395,7 +395,7 @@ form ul li:nth-of-type(odd) {
   position: fixed;
   top: 90%;
   width: 0;
-  height: 85%;
+  height: 96%;
   max-width: 700px;
   left: 50%;
   transform: translateX(-50%);
@@ -403,10 +403,9 @@ form ul li:nth-of-type(odd) {
   padding-left: 1rem !important;
   z-index: 3;
   display: none;
-  opacity: 0;
   flex-direction: column;
   align-items: center;
-  transition: all 0.38s ease;
+  transition: all 0.3s ease-out;
   background-size: cover !important;
   border-radius: 1rem;
 }
@@ -451,6 +450,7 @@ form ul li:nth-of-type(odd) {
   border-radius: 1rem;
   padding: 0.5rem;
   overflow: auto;
+  margin-bottom: 2rem !important;
   transition: all 0.5s ease-in;
 }
 .product .details p,
@@ -466,7 +466,7 @@ form ul li:nth-of-type(odd) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0.4rem 0;
+  margin: 0.4rem;
 }
 .product .details .properties .property,
 .product .summary .properties .property,
@@ -506,12 +506,28 @@ form ul li:nth-of-type(odd) {
   text-decoration: none;
   border-radius: 0.5rem;
 }
+.product .title {
+  font-weight: bold;
+  position: absolute;
+  color: green;
+  background-color: white;
+  padding: 0.4rem;
+  margin: 0.4rem;
+  font-size: 1.1rem;
+  bottom: 0;
+  margin-top: 1rem;
+}
 
 .animate {
   top: 3%;
   width: 88%;
 }
 
+@media only screen and (min-width: 768px) {
+  .product {
+    height: 85%;
+  }
+}
 .show {
   display: flex;
 }
