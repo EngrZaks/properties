@@ -52,6 +52,7 @@ function someProperties(productObj, div, filter) {
 }
 
 function showProducts(obj, filterItems) {
+  let thisProduct;
   obj
     .filter((product) => {
       let filter = true;
@@ -68,7 +69,11 @@ function showProducts(obj, filterItems) {
 
       item.innerHTML = someProperties(product, children, true);
       featured.appendChild(item);
-      item.onclick = () => handleProductClick(product);
+      thisProduct = product;
+      item.addEventListener("click", function (e) {
+        const coordinates = this.getBoundingClientRect();
+        handleProductClick(e, coordinates, product);
+      });
     });
 }
 

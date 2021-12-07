@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -146,6 +147,10 @@ body {
   text-align: center;
   font-family: "Roboto";
   transition: all 0.5s ease-in;
+}
+
+b {
+  font-weight: bold;
 }
 
 nav {
@@ -323,7 +328,7 @@ main section {
 main section h1 {
   font-weight: bold;
   font-size: 1.5rem;
-  background-color: rgba(152, 251, 152, 0.1);
+  background-color: #d9f2d9;
   padding: 1rem;
 }
 main .close {
@@ -333,7 +338,9 @@ main .close {
 }
 
 header {
-  background-color: rgba(152, 251, 152, 0.342);
+  background: #98fb9857 url("../assets/abu_logo.png") no-repeat;
+  background-size: 5rem;
+  background-position: top;
   padding: 1rem;
 }
 header h1 {
@@ -341,6 +348,7 @@ header h1 {
   line-height: 2rem;
   font-size: 1.7rem;
   margin: 0.5rem auto;
+  margin-top: 4rem;
   font-family: "Roboto Slab", serif;
 }
 header p {
@@ -389,6 +397,91 @@ form ul li {
 }
 form ul li:nth-of-type(odd) {
   background-color: #dbdbdb;
+}
+
+#about,
+#contact {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  line-height: 1.3rem;
+}
+#about h1,
+#contact h1 {
+  text-align: center;
+}
+#about .zaks,
+#about .akeem,
+#contact .zaks,
+#contact .akeem {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+#about .zaks img,
+#about .akeem img,
+#contact .zaks img,
+#contact .akeem img {
+  width: 25%;
+  border-radius: 50%;
+}
+#about .zaks .details *,
+#about .akeem .details *,
+#contact .zaks .details *,
+#contact .akeem .details * {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 0.5rem;
+}
+#about .zaks .details a,
+#about .akeem .details a,
+#contact .zaks .details a,
+#contact .akeem .details a {
+  display: flex;
+  align-items: center;
+}
+#about .zaks .details h2,
+#about .akeem .details h2,
+#contact .zaks .details h2,
+#contact .akeem .details h2 {
+  text-transform: uppercase;
+}
+#about .zaks .details img,
+#about .akeem .details img,
+#contact .zaks .details img,
+#contact .akeem .details img {
+  width: 20px;
+}
+#about .zaks a:first-of-type::before,
+#about .akeem a:first-of-type::before,
+#contact .zaks a:first-of-type::before,
+#contact .akeem a:first-of-type::before {
+  content: "💌 send email";
+}
+#about .zaks,
+#contact .zaks {
+  background: #e2e9e2;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+#about .zaks a:last-of-type,
+#contact .zaks a:last-of-type {
+  margin: 0;
+  margin-top: -0.5rem;
+}
+#about .akeem,
+#contact .akeem {
+  background: #e6e6e6;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+footer {
+  margin: 0.7rem auto;
+  width: fit-content;
+  padding: 0.5rem;
+  text-shadow: 30px -20px 3px #ff7b00;
+}
+footer .love {
+  text-shadow: 0 20px 4px red;
 }
 
 .product {

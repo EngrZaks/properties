@@ -1,3 +1,4 @@
+//GETTING ALL THE DOM ELEMENTS NEEDED
 const menu = document.querySelector(".menu"),
   closeBtn = document.querySelector(".close"),
   menuItems = document.querySelector("ul"),
@@ -28,13 +29,15 @@ const toggleMenu = () => {
     : show(menuItems, "show", "opac");
 };
 
-function handleProductClick(product) {
-  // show(productLay, "show", "opac");
+function handleProductClick(e, coordinates, product) {
+  // console.log(e);
+  // const coordinates = this.getBoundingClientRect();
+  // console.log(coordinates);
   productLay.classList.add("show", "opac");
   productLay.style.background = `#e3e3e362 url(${product.img}) no-repeat`;
-  details.innerHTML = someProperties(product, "", false);
+  details.innerHTML = someProperties(product, "", false); //Show Properties without filter in the details tabb
   summary.innerHTML = `<p> ${product.details} </p>`;
-  reference.innerHTML = product.ref
+  reference.innerHTML = product.ref //show the product reference in the reference tab
     .split(",")
     .map((line) => {
       return `<p>${line},</p>`;
@@ -76,7 +79,7 @@ const handleMainNavigate = (e) => {
   const text = e.target.textContent;
   activeNavMain = e.target;
   activateNav(activeNavMain, mainNavList);
-  console.log(text.toLowerCase());
+  // console.log(text.toLowerCase());
   if (text.toLowerCase() === "home") {
     window.scrollTo(0, 0);
   } else {
@@ -190,6 +193,13 @@ navList.forEach((element) => {
 mainNavList.forEach((element) => {
   element.addEventListener("click", handleMainNavigate);
 });
+
+function hideSection(no) {
+  hide(sections[no], "show", "opac");
+  setTimeout(() => {
+    sections[no].style.display = "none";
+  }, 300);
+}
 
 //regieter serviceWorker
 if ("serviceWorker" in navigator) {

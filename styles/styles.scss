@@ -14,6 +14,9 @@ body {
   font-family: "Roboto";
   transition: all 0.5s ease-in;
 }
+b {
+  font-weight: bold;
+}
 nav {
   z-index: 2;
   position: sticky;
@@ -181,7 +184,7 @@ main {
     h1 {
       font-weight: bold;
       font-size: 1.5rem;
-      background-color: rgba(152, 251, 152, 0.1);
+      background-color: #d9f2d9;
       padding: 1rem;
     }
     display: none;
@@ -195,13 +198,16 @@ main {
 }
 
 header {
-  background-color: rgba(152, 251, 152, 0.342);
+  background: #98fb9857 url("../assets/abu_logo.png") no-repeat;
+  background-size: 5rem;
+  background-position: top;
   padding: 1rem;
   h1 {
     text-align: center !important;
     line-height: 2rem;
     font-size: 1.7rem;
     margin: 00.5rem auto;
+    margin-top: 4rem;
     font-family: "Roboto Slab", serif;
   }
   p {
@@ -251,6 +257,68 @@ form {
     li:nth-of-type(odd) {
       background-color: #dbdbdb;
     }
+  }
+}
+#about,
+#contact {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  line-height: 1.3rem;
+  h1 {
+    text-align: center;
+  }
+  .zaks,
+  .akeem {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    img {
+      width: 25%;
+      border-radius: 50%;
+    }
+    .details {
+      * {
+        display: block;
+        text-decoration: none;
+        color: black;
+        margin: 0.5rem;
+      }
+      a {
+        display: flex;
+        align-items: center;
+      }
+      h2 {
+        text-transform: uppercase;
+      }
+      img {
+        width: 20px;
+      }
+    }
+    a:first-of-type::before {
+      content: "💌 send email";
+    }
+  }
+  .zaks {
+    background: #e2e9e2;
+    border-radius: 00.5rem 0.5rem 0 0;
+    a:last-of-type {
+      margin: 0;
+      margin-top: -0.5rem;
+    }
+  }
+  .akeem {
+    background: #e6e6e6;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+footer {
+  margin: 0.7rem auto;
+  width: fit-content;
+  padding: 00.5rem;
+  text-shadow: 30px -20px 3px rgb(255, 123, 0);
+  .love {
+    text-shadow: 0 20px 4px red;
   }
 }
 //product overlay

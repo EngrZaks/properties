@@ -28,11 +28,11 @@
     <nav>
       <div class="title">
         <h1>Physical Properties of Agricultural Materials</h1>
-        <img class="i" src="/assets/logo.svg" alt="logo" />
+        <img class="i" src="assets/logo.svg" alt="logo" />
       </div>
       <div class="menu">
         <img
-          src="/assets/menu.svg"
+          src="assets/menu.svg"
           alt="menu"
           style="color: green; padding: 5px"
         />
@@ -40,7 +40,7 @@
       <ul>
         <img
           class="close i"
-          src="/assets/close.svg"
+          src="assets/close.svg"
           alt="close"
           style="color: green; padding: 5px"
         />
@@ -53,10 +53,15 @@
 
     <header id="header">
       <h1>Physical Properties of Agricultural materials</h1>
-      <p>A final year project by Abullahi Zakariyau, ABU, Zaria</p>
-      <p>under the supervision of Engineer A. O. Lawal</p>
+      <p>A final year project by <b> Abullahi Zakariyau</b></p>
+      <p>
+        in the department of AGRICULTURAL AND BIORESOURCES ENGINEERING, AHMADU
+        BELLO UNIVERSITY (A.B.U), Zaria
+      </p>
+      <p>under the supervision of <b> Engineer Akeem O. Lawal</b></p>
     </header>
 
+    <!-- SEARCH -->
     <form action="">
       <input
         type="text"
@@ -65,15 +70,14 @@
         placeholder="Search Products"
       />
       <button type="submit">
-        <img class="i" src="/assets/search.svg" alt="" />
+        <img class="i" src="assets/search.svg" alt="close" />
       </button>
       <ul class="search-result"></ul>
     </form>
-    <!-- <img src="" alt="" /> -->
     <main>
       <div class="featured">
         <h1>Featured</h1>
-        <small>❕ click on each product for an extended details 👇</small>
+        <small>click on each product for an extended details 👇</small>
         <div class="featured-items"></div>
         <button class="showAllButton">Show All products</button>
       </div>
@@ -86,7 +90,7 @@
           </ul>
           <img
             class="close i"
-            src="/assets/close.svg"
+            src="assets/close.svg"
             alt="close"
             onclick="hideProductLay()"
           />
@@ -100,66 +104,70 @@
       <section id="about">
         <h1>About the Project</h1>
         <p>
-          Plenty of researches have been carried out over the years that
-          investigated the physical properties of various agricultural products.
-          These researches are usually carried out on one product at a time and
-          we now have a wealth of findings on physical properties of
-          Agricultural materials. The problem though is that we do not always
-          have a single source of these data at our finger tips to work with.
-          Searching for them is tedious sometimes and some are more readily
-          available than others.
+          The information on physical properties of agricultural materials has
+          proven to be vital in the design of equipment that will be used in
+          carrying out operations related to those materials.
+        </p>
+        <p>
+          However, a single and readily-available source of these information on
+          various products has always been missing.
+        </p>
+        <p>
+          Addressing this problem will have practical benefits for students and
+          learners of the topic, for Engineers, Technicians, Agriculturists and
+          other individuals who, from time to time need this information to
+          carry out activities related to agricultural materials.
         </p>
         <p>
           The purpose of this work, therefore, is to find and holistically
           gather the properties of as many Agricultural materials as possible
-          that has been investigated by other studies and organize them into a
-          simple, yet robust web application with a beautiful user Interface and
+          that have been determined by other studies and organize them into a
+          simple, yet robust web application with a user friendly Interface and
           a nice user experience.
         </p>
-        <span
-          class="close material-icons"
-          onclick="hide(sections[0], 'show', 'opac')"
-        >
-          close
-        </span>
+        <img
+          class="close i"
+          src="assets/close.svg"
+          alt="close"
+          onclick="hideSection(0)"
+        />
       </section>
       <section id="contact">
         <h1>Contact Us</h1>
-        <p>abzakariyya@gmail.com</p>
-        <p>+2348023767822</p>
-        <span
-          class="close material-icons"
-          onclick="hide(sections[1], 'show', 'opac')"
-        >
-          close
-        </span>
+        <div class="zaks">
+          <img src="assets/zaks.jpg" alt="DevZaks" />
+          <div class="details">
+            <b>Abdullahi Zakariyau T.</b>
+            <h2>Project Engineer</h2>
+            <a href="mailto:abzakariyya@gmail.com"> </a>
+            <a href="tel:+2348023767822"> 📞 +2348023767822</a>
+            <a href="https://devzaks.netlify.app" target="blank">
+              <img src="assets/web.svg" alt="website" /> devzaks.netlify.app</a
+            >
+          </div>
+        </div>
+        <div class="akeem">
+          <img src="assets/akeem.jpg" alt="DevZaks" />
+          <div class="details">
+            <b>Engineer Akeem O. Lawal</b>
+            <h2>Project Supervisor</h2>
+            <a href="mailto:"> </a>
+            <a href="tel:+2348037024747"> 📞 +2348037024747</a>
+          </div>
+        </div>
+        <img
+          class="close i"
+          src="assets/close.svg"
+          alt="close"
+          onclick="hideSection(1)"
+        />
       </section>
     </main>
 
-    <footer></footer>
-    <!-- <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyDkXmsXwYTpQqZ9TErDOJv7m5csnMCMtnI",
-        authDomain: "properties-10227.firebaseapp.com",
-        projectId: "properties-10227",
-        storageBucket: "properties-10227.appspot.com",
-        messagingSenderId: "1004052901514",
-        appId: "1:1004052901514:web:f89e607445e306b0300773",
-        measurementId: "G-ZQS29VY2YT",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script> -->
+    <footer>
+      made with <span class="love">🧡</span> by
+      <a href="https://devzaks.netlify.app" target="blank">DevZaks</a>
+    </footer>
     <script src="./scripts/properties.js" defer></script>
     <script src="./scripts/helpers.js" defer></script>
     <script src="./scripts/app.js" defer></script>
