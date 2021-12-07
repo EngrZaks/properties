@@ -290,7 +290,7 @@ const products = [
     Width: "2.53mm",
     Thickness: "2.75mm",
     Equivalent_diameter: "3.48",
-    Sphericity: "4.352",
+    Sphericity: "0.435",
     Thousand_grain_Mass: "28g",
     Porosity: "46%",
     Bulk_density: "541kg m−3",
