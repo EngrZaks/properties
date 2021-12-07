@@ -452,11 +452,13 @@ form ul li:nth-of-type(odd) {
 #contact .akeem .details img {
   width: 20px;
 }
-#about .zaks a:first-of-type::before,
+@media only screen and (max-width: 600px) {
+  #about .zaks a:first-of-type::before,
 #about .akeem a:first-of-type::before,
 #contact .zaks a:first-of-type::before,
 #contact .akeem a:first-of-type::before {
-  content: "💌 send email";
+    content: "💌 send email";
+  }
 }
 #about .zaks,
 #contact .zaks {
@@ -478,7 +480,7 @@ footer {
   margin: 0.7rem auto;
   width: fit-content;
   padding: 0.5rem;
-  text-shadow: 30px -20px 3px #ff7b00;
+  text-shadow: 20px -10px 3px #ff7b00;
 }
 footer .love {
   text-shadow: 0 20px 4px red;
@@ -653,6 +655,12 @@ footer .love {
   }
   main .featured .featured-items .item {
     margin: 0.5rem;
+  }
+  main .zaks a:first-of-type:after {
+    content: "💌 aolawal10@gmail.com";
+  }
+  main .akeem a:first-of-type:after {
+    content: "💌 abzakariyya@gmail.com";
   }
 }
 @media only screen and (min-width: 992px) {

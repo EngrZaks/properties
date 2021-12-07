@@ -295,8 +295,10 @@ form {
         width: 20px;
       }
     }
-    a:first-of-type::before {
-      content: "💌 send email";
+    @media only screen and (max-width: 600px) {
+      a:first-of-type::before {
+        content: "💌 send email";
+      }
     }
   }
   .zaks {
@@ -316,7 +318,7 @@ footer {
   margin: 0.7rem auto;
   width: fit-content;
   padding: 00.5rem;
-  text-shadow: 30px -20px 3px rgb(255, 123, 0);
+  text-shadow: 20px -10px 3px rgb(255, 123, 0);
   .love {
     text-shadow: 0 20px 4px red;
   }
@@ -352,6 +354,16 @@ footer {
         .item {
           margin: 0.5rem;
         }
+      }
+    }
+    .zaks {
+      a:first-of-type:after {
+        content: "💌 aolawal10@gmail.com";
+      }
+    }
+    .akeem {
+      a:first-of-type:after {
+        content: "💌 abzakariyya@gmail.com";
       }
     }
   }
