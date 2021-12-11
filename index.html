@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Physical properties of agricultural materials</title>
     <meta
       name="description"
-      content="Physical Properties of various Agricultural materials"
+      content="Physical Properties of various Agricultural materials/products. size, shape, density, porosity, etc. of seeds, nuts, maize, rice, millet, wheat and more."
     />
-    <title>Agric-properties</title>
     <link rel="icon" href="/assets/logo.svg" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/assets/logo.svg" />
@@ -62,23 +62,31 @@
     </header>
 
     <!-- SEARCH -->
-    <form action="">
+    <form action="" itemscope itemtype="https://schema.org/SearchAction">
       <input
+        itemprop="search for specific agricultural product"
         type="text"
         name="search"
         id="search"
         placeholder="Search Products"
       />
-      <button type="submit">
+      <button type="submit" itemprop="send search query">
         <img class="i" src="assets/search.svg" alt="close" />
       </button>
       <ul class="search-result"></ul>
     </form>
     <main>
-      <div class="featured">
-        <h1>Featured</h1>
+      <div
+        class="featured"
+        itemscope
+        itemtype="https://schema.org/ProductCollection"
+      >
+        <h1>Featured Products</h1>
         <small>click on each product for an extended details 👇</small>
-        <div class="featured-items"></div>
+        <div
+          class="featured-items"
+          itemprop="featured agricultural products. rice, cowpea, corn, sorghum, etc."
+        ></div>
         <button class="showAllButton">Show All products</button>
       </div>
       <div class="product">
